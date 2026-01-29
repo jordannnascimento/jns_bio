@@ -121,12 +121,13 @@ body {
   opacity: 0.85;
 }
 
+/* INFO FIXA — DATA E HORA */
 .info-meta {
-  font-size: clamp(16px, 2.5vw, 28px);
-  letter-spacing: -1px;
-}
+  position: fixed;
+  left: 24px;
+  bottom: 24px;
 
-  font-size: 28px;
+  font-size: 28px; /* DESKTOP */
   font-weight: 400;
   line-height: 1;
   letter-spacing: -2px;
@@ -138,11 +139,12 @@ body {
 
 @media (max-width: 768px) {
   .info-meta {
-    font-size: 42px;
+    font-size: 16px; /* MOBILE */
     left: 16px;
     bottom: 16px;
   }
 }
+
 
 @keyframes gradientMove {
   0% {
