@@ -11,43 +11,86 @@
 </head>
 <body>
 
-  <!-- Decorative logo -->
+  <!-- Logo decorativo grande -->
   <div class="corner-logo">
-    <img src="logo_jns2.png" alt="JNS Decorative Logo" />
+    <img src="logo_jns2.png" alt="JNS Decorative Logo">
   </div>
 
   <main class="container">
 
+    <!-- Brand -->
     <div class="brand">
-      <img src="logo_jns2.png" alt="JNS Estúdio" class="logo" />
+      <img src="logo_jns2.png" alt="JNS Estúdio Logo" class="logo" />
       <h1>JNS Estúdio</h1>
       <p class="tagline">
+        Built by humans. Enhanced by professionals.
+      </p>
+    </div>
+
+    <!-- Maintenance message -->
+    <div class="maintenance">
+      <p class="maintenance-title">Site em manutenção</p>
+      <p class="maintenance-text">
+        Estamos ajustando os detalhes para lançar uma nova experiência.<br>
         Branding, design e automação com visão de crescimento.
       </p>
     </div>
 
-    <div class="maintenance">
-      <h2>Estamos em manutenção</h2>
-      <p>
-        Estamos preparando uma nova experiência para apresentar
-        nosso processo, nossos cases e nossa visão de crescimento.
-      </p>
-      <p class="soon">
-        Em breve, tudo estará no ar.
-      </p>
-    </div>
-
-    <div class="cta">
+    <!-- CTA -->
+    <div class="links">
       <a
         href="https://wa.me/message/H3WZDLZ7R6AML1"
         target="_blank"
-        class="btn-whatsapp"
+        class="link-btn"
       >
-        Falar comigo no WhatsApp
+        WhatsApp
       </a>
     </div>
 
+    <!-- Info -->
+    <div class="info">
+      <div class="info-title">JNS Estúdio (PR) · Brasil – EUA</div>
+      <div class="info-sub">Creative Branding Studio</div>
+      <div class="info-email">contato@jordann</div>
+
+      <div class="info-meta">
+        <div id="current-date"></div>
+        <div id="current-time"></div>
+      </div>
+    </div>
+
   </main>
+
+  <!-- Script data / hora -->
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+
+      const date = new Intl.DateTimeFormat("pt-BR", {
+        timeZone: "America/Sao_Paulo",
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric"
+      }).format(now);
+
+      const time = new Intl.DateTimeFormat("pt-BR", {
+        timeZone: "America/Sao_Paulo",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+      }).format(now);
+
+      document.getElementById("current-date").textContent = date;
+      document.getElementById("current-time").textContent = time;
+    }
+
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+  </script>
+
+</body>
+</html>
+
 
 </body>
 </html>
