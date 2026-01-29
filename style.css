@@ -7,6 +7,7 @@
     Inter, Helvetica, Arial, sans-serif;
 }
 
+/* BODY + GRADIENT */
 body {
   min-height: 100vh;
   background: linear-gradient(
@@ -52,9 +53,9 @@ body {
   text-align: center;
 }
 
-/* BRAND */
+/* BRAND (ASSINATURA) */
 .brand {
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .logo {
@@ -63,9 +64,9 @@ body {
 }
 
 .brand h1 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin-bottom: 8px;
+  font-size: 1.4rem;        /* menor que o título de manutenção */
+  font-weight: 500;
+  margin-bottom: 6px;
 }
 
 .tagline {
@@ -73,29 +74,26 @@ body {
   opacity: 0.9;
 }
 
-/* TEXTO DE MANUTENÇÃO */
+/* BLOCO DE MANUTENÇÃO (TÍTULO PRINCIPAL) */
 .maintenance {
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
 .maintenance-title {
-  font-size: 1.6rem;
-  font-weight: 600;
-  letter-spacing: -0.5px;
-  margin-bottom: 14px;
-  position: relative;
+  font-size: 3rem;          /* TÍTULO PRINCIPAL */
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  line-height: 1.05;
+  margin-bottom: 18px;
 }
 
-.maintenance-title::after {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 2px;
-  background: rgba(255,255,255,0.35);
-  margin: 12px auto 0;
-  border-radius: 2px;
+.maintenance-text {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  max-width: 36ch;
+  margin: 0 auto;
+  opacity: 0.95;
 }
-
 
 /* CTA */
 .links {
@@ -133,7 +131,7 @@ body {
   left: 24px;
   bottom: 24px;
 
-  font-size: 28px; /* DESKTOP */
+  font-size: 28px;          /* DESKTOP */
   font-weight: 400;
   line-height: 1;
   letter-spacing: -2px;
@@ -145,8 +143,20 @@ body {
 
 /* MOBILE */
 @media (max-width: 768px) {
+  .maintenance-title {
+    font-size: 2.2rem;
+  }
+
+  .maintenance-text {
+    font-size: 1.05rem;
+  }
+
+  .brand h1 {
+    font-size: 1.2rem;
+  }
+
   .info-meta {
-    font-size: 16px; /* MOBILE */
+    font-size: 16px;        /* MOBILE */
     left: 16px;
     bottom: 16px;
   }
@@ -159,5 +169,7 @@ body {
   .corner-logo img {
     width: 420px;
   }
+}
+
 }
 
