@@ -122,9 +122,9 @@ body {
 }
 
 .info-meta {
-  position: fixed;
-  left: 24px;
-  bottom: 24px;
+  font-size: clamp(16px, 2.5vw, 28px);
+  letter-spacing: -1px;
+}
 
   font-size: 28px;
   font-weight: 400;
